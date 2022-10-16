@@ -5,6 +5,19 @@ import numpy as np
 st.title('Uber pickups in NYC')
 st.title('TEST')
 
+# First test-function
+def quadrierer(eingabewert):
+    rueckgabewert = eingabewert * eingabewert
+    return rueckgabewert
+
+calc_nr = st.number_input('Lass uns ein bisschen Zahlen quadrieren! :D', 2)
+
+if st.button('Quadrieren'):
+    ausgabewert = quadrierer(calc_nr)
+    st.write(ausgabewert)
+else:
+    st.write('klick auf quadrieren - trau dich ;)')
+
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
             'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
